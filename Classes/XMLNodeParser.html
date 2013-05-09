@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>XMLNodeParser Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">NodeParser </a></h1>
+				<a id="developerHome" href="../index.html">Robert M. Ryan</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">XMLNodeParser Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/results">&nbsp;&nbsp;&nbsp;&nbsp;results</option>
+	
+	
+	
+	
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties">Properties</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/results">results</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="XMLNodeParser Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">XMLNodeParser Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSXMLParser</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">XMLNodeParser.h<br />XMLNodeParser.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>This is a subclass of the standard <code>NSXMLParser</code> class, which parsers the XML
+into a nested structure of <a href="../Classes/ParserNode.html"><code>ParserNode</code></a> objects.</p>
+
+<p><strong>Example</strong></p>
+
+<p>Imagine a XML of the format:</p>
+
+<pre><code>&lt;Schools&gt;
+    &lt;School&gt;
+        &lt;ID&gt;335823&lt;/ID&gt;
+        &lt;Name&gt;Fairfax High School&lt;/Name&gt;
+        &lt;Students&gt;
+            &lt;Student&gt;
+                &lt;ID&gt;4195653&lt;/ID&gt;
+                &lt;Name&gt;Will Turner&lt;/Name&gt;
+            &lt;/Student&gt;
+            &lt;Student&gt;
+                &lt;ID&gt;4195654&lt;/ID&gt;
+                &lt;Name&gt;Bruce Paltrow&lt;/Name&gt;
+            &lt;/Student&gt;
+            &lt;Student&gt;
+                &lt;ID&gt;4195655&lt;/ID&gt;
+                &lt;Name&gt;Santosh Gowswami&lt;/Name&gt;
+            &lt;/Student&gt;
+        &lt;/Students&gt;
+    &lt;/School&gt;
+&lt;/Schools&gt;
+</code></pre>
+
+<p>You could parse this XML like so:</p>
+
+<pre><code>XMLNodeParser *parser = [[XMLNodeParser alloc] initWithContentsOfURL:url];
+[parser parse];
+
+ParserNode *schools = parser.results;
+ParserNode *school = schools[0];
+NSLog(@"first school name = %@", school[@"Name"]);
+ParserNode *students = school[@"Students"];
+NSLog(@"there are %d students", students.count);
+NSLog(@"third student at that school = %@", students[2][@"Name"]);
+</code></pre>
+
+<p>That generates the following output:</p>
+
+<pre><code>2013-05-09 12:48:38.995 NodeParser[16366:c07] first school name = Fairfax High School
+2013-05-09 12:48:38.998 NodeParser[16366:c07] there are 3 students
+2013-05-09 12:48:38.999 NodeParser[16366:c07] third student at that school = Santosh Gowswami
+</code></pre><div class="warning"><p><strong>Warning:</strong> This was written using ARC. If you are not using ARC, you may have to alter this code accordingly.</p>
+
+<p>Also note that the use of the &ldquo;boxing&rdquo; syntax (e.g. <code>schools[0]</code> or <code>student[@"Name"]</code> requires Xcode 4.5 or greater.</p></div>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Properties" name="task_Properties"></a>
+						
+<h3 class="subsubtitle task-title">Properties</h3>
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/results">&nbsp;&nbsp;results</a></code>
+		<span class="tooltip"><p>The results represented as a <a href="../Classes/ParserNode.html">ParserNode</a>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/results" title="results"></a>
+	<h3 class="subsubtitle method-title">results</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The results represented as a <a href="../Classes/ParserNode.html">ParserNode</a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) ParserNode *results</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">XMLNodeParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Robert M. Ryan. All rights reserved. (Last updated: 2013-05-09)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

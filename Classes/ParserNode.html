@@ -1,0 +1,819 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>ParserNode Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">NodeParser </a></h1>
+				<a id="developerHome" href="../index.html">Robert M. Ryan</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">ParserNode Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/attributes">&nbsp;&nbsp;&nbsp;&nbsp;attributes</option>
+	
+	<option value="//api/name/childNodes">&nbsp;&nbsp;&nbsp;&nbsp;childNodes</option>
+	
+	<option value="//api/name/elementName">&nbsp;&nbsp;&nbsp;&nbsp;elementName</option>
+	
+	<option value="//api/name/value">&nbsp;&nbsp;&nbsp;&nbsp;value</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/addChild:">&nbsp;&nbsp;&nbsp;&nbsp;- addChild:</option>
+	
+	<option value="//api/name/count">&nbsp;&nbsp;&nbsp;&nbsp;- count</option>
+	
+	<option value="//api/name/dictionary">&nbsp;&nbsp;&nbsp;&nbsp;- dictionary</option>
+	
+	<option value="//api/name/objectAtIndexedSubscript:">&nbsp;&nbsp;&nbsp;&nbsp;- objectAtIndexedSubscript:</option>
+	
+	<option value="//api/name/objectForKeyedSubscript:">&nbsp;&nbsp;&nbsp;&nbsp;- objectForKeyedSubscript:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties">Properties</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Methods">Methods</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attributes">attributes</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/childNodes">childNodes</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/elementName">elementName</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/value">value</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addChild:">addChild:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/count">count</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dictionary">dictionary</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectAtIndexedSubscript:">objectAtIndexedSubscript:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectForKeyedSubscript:">objectForKeyedSubscript:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="ParserNode Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">ParserNode Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">ParserNode.h<br />ParserNode.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>This is a object that represents a &ldquo;node&rdquo; of the XML structure parsed by the <a href="../Classes/XMLNodeParser.html"><code>XMLNodeParser</code></a> class.</p>
+
+<p>This reflects the recursive nature of XML files, whereby every node is represented by either:</p>
+
+<ul>
+<li><p>a <code>NSString</code> called <a href="#//api/name/value"><code>value</code></a>; or</p></li>
+<li><p>an array, called <a href="#//api/name/childNodes"><code>childNodes</code></a>, of <code>ParserNode</code> objects) representing the sub-elements
+of the XML feed.</p></li>
+</ul>
+
+
+<p>For usage example, please refer to the <a href="../Classes/XMLNodeParser.html"><code>XMLNodeParser</code></a> documentation.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Properties" name="task_Properties"></a>
+						<h3 class="subsubtitle task-title">Properties</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/elementName">&nbsp;&nbsp;elementName</a></code>
+		<span class="tooltip"><p>The XML element name</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/attributes">&nbsp;&nbsp;attributes</a></code>
+		<span class="tooltip"><p>The XML attributes</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/value">&nbsp;&nbsp;value</a></code>
+		<span class="tooltip"><p>If the element was a simple text string, this is the value of that string.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/childNodes">&nbsp;&nbsp;childNodes</a></code>
+		<span class="tooltip"><p>An array of <code>ParserNode</code> objects representing the sub-elements of this element.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Methods" name="task_Methods"></a>
+						<h3 class="subsubtitle task-title">Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dictionary">&ndash;&nbsp;dictionary</a></code>
+		<span class="tooltip"><p>A dictionary representing the contents of this <code>ParserNode</code></p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/count">&ndash;&nbsp;count</a></code>
+		<span class="tooltip"><p>The number of child elements for this node. If there are no child elements,
+this will be <code>0</code>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectAtIndexedSubscript:">&ndash;&nbsp;objectAtIndexedSubscript:</a></code>
+		<span class="tooltip"><p>This permits the use of &ldquo;Modern Objective-C&rdquo; boxing syntax for a zero-based numeric index.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectForKeyedSubscript:">&ndash;&nbsp;objectForKeyedSubscript:</a></code>
+		<span class="tooltip"><p>This permits the use of &ldquo;Modern Objective-C&rdquo; boxing syntax for a <code>NSString</code> key.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addChild:">&ndash;&nbsp;addChild:</a></code>
+		<span class="tooltip"><p>This is used by the parser to add a child node to the <code>ParserNode</code> object.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/attributes" title="attributes"></a>
+	<h3 class="subsubtitle method-title">attributes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The XML attributes</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSDictionary *attributes</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ParserNode.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/childNodes" title="childNodes"></a>
+	<h3 class="subsubtitle method-title">childNodes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>An array of <code>ParserNode</code> objects representing the sub-elements of this element.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSMutableArray *childNodes</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If there were no sub elements, this will be <code>nil</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ParserNode.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/elementName" title="elementName"></a>
+	<h3 class="subsubtitle method-title">elementName</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The XML element name</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *elementName</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ParserNode.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/value" title="value"></a>
+	<h3 class="subsubtitle method-title">value</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>If the element was a simple text string, this is the value of that string.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSMutableString *value</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If the element has sub-elements, this will be <code>nil</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ParserNode.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/addChild:" title="addChild:"></a>
+	<h3 class="subsubtitle method-title">addChild:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This is used by the parser to add a child node to the <code>ParserNode</code> object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addChild:(id)<em>child</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>child</em></dt>
+			<dd><p>A <code>ParserNode</code> object to add as a child of this <code>ParserNode</code> object.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ParserNode.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/count" title="count"></a>
+	<h3 class="subsubtitle method-title">count</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The number of child elements for this node. If there are no child elements,
+this will be <code>0</code>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSUInteger)count</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ParserNode.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dictionary" title="dictionary"></a>
+	<h3 class="subsubtitle method-title">dictionary</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A dictionary representing the contents of this <code>ParserNode</code></p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)dictionary</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This is useful if you want to do a simple <code>NSLog</code> of the results, e.g.,</p>
+
+<pre><code>NSLog(@"%@", [node description]);
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ParserNode.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/objectAtIndexedSubscript:" title="objectAtIndexedSubscript:"></a>
+	<h3 class="subsubtitle method-title">objectAtIndexedSubscript:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This permits the use of &ldquo;Modern Objective-C&rdquo; boxing syntax for a zero-based numeric index.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)objectAtIndexedSubscript:(NSUInteger)<em>index</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>index</em></dt>
+			<dd><p>A the zero-based index</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>If that child, itself, has an array of nodes, this will return a <code>ParserNode</code> object.</p>
+
+<p>If the child has no child nodes itself, this simply returns a <code>NSString</code> of the <a href="#//api/name/value">value</a>.</p>
+
+<p>If no matching child object found, this returns <code>nil</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>For example, if there were child nodes, this returns the first node:</p>
+
+<pre><code>id child = node[0];
+</code></pre><div class="warning"><p><strong>Warning:</strong> The use of the &ldquo;[]&rdquo; syntax requires Xcode 4.5 or greater. For earlier compilers,
+rather than</p>
+
+<pre><code>id child = node[0];
+</code></pre>
+
+<p>you would have to use:</p>
+
+<pre><code>id child = [node objectAtIndexedSubscript:0];
+</code></pre></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ParserNode.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/objectForKeyedSubscript:" title="objectForKeyedSubscript:"></a>
+	<h3 class="subsubtitle method-title">objectForKeyedSubscript:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This permits the use of &ldquo;Modern Objective-C&rdquo; boxing syntax for a <code>NSString</code> key.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)objectForKeyedSubscript:(NSString *)<em>key</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd><p>A the <code>NSString</code> <a href="#//api/name/value">value</a> of the <a href="#//api/name/elementName"><code>elementName</code></a> of the child node.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>If this finds a child that, itself, has an array of nodes, this will return a <code>ParserNode</code> object.
+If the matching child has no child nodes itself, this simply returns a <code>NSString</code> of the <a href="#//api/name/value"><code>value</code></a> of this node.</p>
+
+<p>If no matching child object found, this returns <code>nil</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>For example, if there were child nodes, this returns the node whose <a href="#//api/name/elementName"><code>elementName</code></a>
+matches the:</p>
+
+<pre><code>id child = node[@"elementName"];
+</code></pre><div class="warning"><p><strong>Warning:</strong> The use of the &ldquo;[]&rdquo; syntax requires Xcode 4.5 or greater. For earlier compilers,
+rather than</p>
+
+<pre><code>id child = node[@"elementName"];
+</code></pre>
+
+<p>you would have to use:</p>
+
+<pre><code>id child = [node objectForKeyedSubscript:@"elementName"];
+</code></pre></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ParserNode.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Robert M. Ryan. All rights reserved. (Last updated: 2013-05-09)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
