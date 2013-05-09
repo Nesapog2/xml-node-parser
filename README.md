@@ -8,7 +8,7 @@ This is an XML parser, based upon `NSXMLParser`, that parsers a well-formed XML 
 
 This is a work-in-progress so use at your own risk. But it illustrates how to use `NSXMLParser` to parse an XML feed into a tree-like structure that can be easily navigated.
 
-For more information, see the [`XMLNodeParser` documentation](http://robertmryan.github.com/xml-node-parser/).
+For more information, see the [`XMLNodeParser` documentation](http://robertmryan.github.com/xml-node-parser/Classes/XMLNodeParser.html).
 
 --
 
