@@ -27,7 +27,7 @@
 {
     self = [super init];
     if (self) {
-        self.delegate = self;
+        [super setDelegate:self];
     }
     return self;
 }
@@ -36,7 +36,7 @@
 {
     self = [super initWithContentsOfURL:url];
     if (self) {
-        self.delegate = self;
+        [super setDelegate:self];
     }
     return self;
 }
@@ -45,7 +45,7 @@
 {
     self = [super initWithData:data];
     if (self) {
-        self.delegate = self;
+        [super setDelegate:self];
     }
     return self;
 }
@@ -54,7 +54,7 @@
 {
     self = [super initWithStream:stream];
     if (self) {
-        self.delegate = self;
+        [super setDelegate:self];
     }
     return self;
 }
@@ -67,6 +67,20 @@
         node = node.childNodes[[indexPath indexAtPosition:i]];
     
     return node;
+}
+
+// Given that this is its own NSXMLParserDelegate, we want to make
+// sure the end user doesn't accidentally circumvent this by setting
+// the delegate themselves (if you're used to writing NSXMLParser
+// code, you could easy do so reflexively).
+//
+// If someone creates a XMLNodeParser object, (a) they'll have warning
+// NSLogged on cosole; and (b) the system will ignore their attempts
+// to do so.
+
+- (void)setDelegate:(id<NSXMLParserDelegate>)delegate __attribute__ ((deprecated))
+{
+    NSLog(@"%s: warning: request to set delegate ignored; XMLNodeParser already has its own NSXMLParserDelegate code", __FUNCTION__);
 }
 
 #pragma mark - NSXMLParserDelegate methods

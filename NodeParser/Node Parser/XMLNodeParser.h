@@ -76,4 +76,6 @@
 
 @property (nonatomic, strong) ParserNode *results;
 
+- (void)setDelegate:(id<NSXMLParserDelegate>)delegate __attribute__ ((deprecated));
+
 @end
